@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="">
+	<meta charset="UTF-8">
+	<title>kidu</title>
+</head>
+<body>
+
+<div id="app">
+	<h1>${ message }<h1>
+	<br>
+</div>
+<div id = "kiduapp">
+	<br>
+	<br>
+
+	  <b-container >
+		  <h1>
+	  <b-row >
+	      <b-col sm="3">
+		      <label >${num1}</label>
+	      </b-col>
+
+	      <b-col >
+		      <label >${opr1}</label>
+	      </b-col>
+
+	      <b-col >
+		      <label >${num2}</label>
+	      </b-col>
+	      <b-col >
+		  <input @keyup.enter="mul1" v-model=ans2>
+	      </b-col>
+
+	  </b-row>
+	  <br>
+	  <b-row >
+	          <label >${ansmsg}</label>
+	  </b-row>
+
+	  </h1>
+
+	  <h3>
+	  <b-row >
+	          <label >Percent Right: ${perright}%</label>
+	  </b-row>
+	
+	  <b-row >
+	  	  <br>
+	          <label >Questions Answered: ${totq}</label>
+	  </b-row>
+
+	  <b-row>
+	  	  <br>
+	          <label >Speed: ${sspeed} sec/Q</label>
+	  </b-row>
+
+	  </h3>
+	  </b-container>
+  
+	<br>
+	<br>
+
+</div>
+</body>
+
+	<link rel="shortcut icon" href="">
+
+	<link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+	<link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"/>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+	<script type = "text/javascript" src = "{{ url_for('static', filename = 'js/kidu.js') }}" ></script>
+</html>
+
